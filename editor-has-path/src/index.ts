@@ -15,15 +15,9 @@ const editorHasPathNewPattern = `
 const simpleEditorHasPath = `Editor.hasPath`;
 const simpleEditorHasPathNew = `Editor.hasPath(editor, path)`;
 
-export default function transform({ files }: Api) {
-  // Transform Editor.hasPath within if statements
-  files("**/*.ts")
-    .jsFam()
-    .astGrep(editorHasPathPattern)
-    .replace(editorHasPathNewPattern);
+export default async function transform({ files }: Api) {
 
-  // Transform standalone Editor.hasPath usage
-  files("**/*.ts")
+  await files("**/*.ts")
     .jsFam()
     .astGrep(simpleEditorHasPath)
     .replace(simpleEditorHasPathNew);
