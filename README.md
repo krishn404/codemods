@@ -4,5 +4,5 @@ This repository contains the transformation upgrade for Slate from version **v0.
 
 ## Current Status
 
-The project is currently in the **working phase**.
+The transformation is currently in the **working phase**.
 
