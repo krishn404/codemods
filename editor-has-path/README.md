@@ -13,7 +13,7 @@ if (Editor.hasPath) {
 }
 ```
 
-### After
+### After (v0.104)
 
 ```ts
 if (Editor.hasPath(editor, path)) {
