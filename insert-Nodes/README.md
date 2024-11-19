@@ -1,19 +1,16 @@
+## Transform API Updates for Slate v0.88 to v0.104
 
-
-
-## Example
-This codemod turns X into Y. It also does Z.
-Note: this is a contrived example. Please modify it.
-
-### Before
+### Before (v0.88)
 
 ```ts
-const toReplace = "hello";
+Transforms.insertNodes(editor, newNode);
 ```
 
-### After
+### After (v0.104)
 
 ```ts
-const replacement = "hello";
+Transforms.insertNodes(editor, newNode, {
+  at: editor.selection ?? undefined,
+  select: true,
+});
 ```
-
