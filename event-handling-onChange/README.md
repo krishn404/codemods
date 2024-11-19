@@ -1,19 +1,23 @@
+## Event Handling Changes Codemod
 
+This codemod automates the update of your `onChange` event handler function to support the new `Descendant[]` type and selection handling introduced in version 0.104.
 
+**Before (v0.88):**
 
-## Example
-This codemod turns X into Y. It also does Z.
-Note: this is a contrived example. Please modify it.
-
-### Before
-
-```ts
-const toReplace = "hello";
+```typescript
+const onChange = value => {
+  setValue(value);
+};
 ```
+**After (v0.104)**
 
-### After
-
-```ts
-const replacement = "hello";
+```typescript
+const onChange = (newValue: Descendant[]) => {
+  setValue(newValue);
+  // Additional state management if needed
+  const selection = editor.selection;
+  if (selection) {
+    // Handle selection changes
+  }
+};
 ```
-
