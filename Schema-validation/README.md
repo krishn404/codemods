@@ -1,19 +1,29 @@
 
 
 
-## Example
-This codemod turns X into Y. It also does Z.
-Note: this is a contrived example. Please modify it.
+## Slate v0.104 Schema Validation transformtaion
+This codemod updated the Schema Validation for Slate v0.88 to v0.104
 
 ### Before
 
 ```ts
-const toReplace = "hello";
+const schema = {
+  blocks: {
+    paragraph: {
+      isVoid: false,
+    },
+  },
+};
 ```
 
 ### After
 
 ```ts
-const replacement = "hello";
+const isValidNode = (node: Node) => {
+  if (Element.isElement(node) && node.type === 'paragraph') {
+    return node.children.every(child => Text.isText(child));
+  }
+  return true;
+};
 ```
 
