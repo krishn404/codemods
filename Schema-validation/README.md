@@ -2,7 +2,7 @@
 
 
 ## Slate v0.104 Schema Validation transformtaion
-This codemod updated the Schema Validation for Slate v0.88 to v0.104
+This codemod updated the Schema Validation for  <b> Slate v0.88 to v0.104
 
 ### Before
 
