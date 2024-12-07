@@ -5,5 +5,10 @@
   "engine": "workflow",
   "private": false,
   "arguments": [],
-  "meta": {}
+  "meta": {
+    "tags": [
+      "slate"
+    ],
+    "git": "https://github.com/krishn404/slate-v0.104-codemods.git"
+  }
 }

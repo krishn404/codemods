@@ -2,8 +2,6 @@
 
 This codemod transforms the usage of `withReact(createEditor())` into a `useMemo`-based structure, which wraps the editor creation and introduces an inline-checking function (`isInline`) for the editor instance. This transformation optimizes the creation of the editor object by memoizing it.
 
-## Example
-
 
 **Before (v0.88):**
 

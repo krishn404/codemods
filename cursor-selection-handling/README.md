@@ -1,24 +1,32 @@
+# Cursor and Selection Handler Migration Guide
 
+## Overview
+This guide explains how to migrate cursor and selection handling from Slate v0.88 to v0.104, including the addition of null safety checks.
 
+## Code Changes
 
-## Codemod for transforming Cursor and Selection Handling for Slate v0.88 to v0.104
-This codemod turns v0.88 handling of selection into v0.104 handling. It also adds a safety check for the selection being null.
-
-
-### Before (v0.88)
-
-```ts
+### Version 0.88 
+```typescript
 const selection = editor.selection;
 const start = Range.start(selection);
 ```
 
-### After (v0.104)
-
-```ts
+### Version 0.104 
+```typescript
 const selection = editor.selection as Range | null;
+
 if (selection) {
   const start = Range.start(selection);
-  // Handle selection safely
+  // Selection is now safely typed and null-checked
 }
 ```
 
+## Key Changes
+- Added explicit type casting to `Range | null`
+- Implemented null safety check using conditional block
+- Ensures selection exists before accessing its properties
+
+## Migration Benefits
+- Prevents runtime errors from null selections
+- Provides better TypeScript type safety
+- Follows current best practices for Slate selection handling

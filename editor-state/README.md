@@ -1,19 +1,27 @@
 
 
 
-## Example
-This codemod turns X into Y. It also does Z.
-Note: this is a contrived example. Please modify it.
 
+This codemod migrates from using `useContext(EditorContext)` to the new `useSlate()` hook in Slate. It transforms the editor state management approach and adds new state hooks.
+ 
 ### Before
 
 ```ts
-const toReplace = "hello";
+const MyComponent = () => {
+  const editor = useContext(EditorContext);
+  // ...
+};
 ```
 
 ### After
 
 ```ts
-const replacement = "hello";
+const MyComponent = () => {
+  const editor = useSlate();
+  // Access editor state using new hooks
+  const selected = useSelected();
+  const focused = useFocused();
+  // ...
+};
 ```
 
