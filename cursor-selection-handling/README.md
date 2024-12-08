@@ -1,7 +1,5 @@
-# Cursor and Selection Handler Migration Guide
 
-## Overview
-This guide explains how to migrate cursor and selection handling from Slate v0.88 to v0.104, including the addition of null safety checks.
+This codemod shows how to migrate cursor and ```selection``` handling from Slate v0.88 to v0.104, including the Preventing runtime errors from null selections.
 
 ## Code Changes
 

@@ -1,7 +1,7 @@
 
 
 
-## Transforming ```Editor.node```
+
 
 This codemod transforms ```Editor.node``` usage into ```Editor.nodes``` format. It also handles cases with both destructuring and non-destructuring .The new API returns an iterator of nodes instead of a single node, requiring changes to existing code patterns.
 

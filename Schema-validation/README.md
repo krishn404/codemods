@@ -1,9 +1,8 @@
 
 
 
-## Slate v0.104 Schema Validation transformtaion
-This codemod updated the Schema Validation for  <b> Slate v0.88 to v0.104
 
+This transformation involves modifying how a ```paragraph``` block type is handled in a schema-like structure by replacing its static configuration with a runtime validation function ```(isValidNode)```.
 ### Before
 
 ```ts

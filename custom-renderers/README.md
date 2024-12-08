@@ -1,5 +1,4 @@
 
-## Updating ```renderElement```
 
 This codemod updates the ```renderElement``` function to include TypeScript typings and adds a default case for rendering unsupported element types.
 
